@@ -11,6 +11,7 @@ export default function CatCard() {
       <StyledCatCard>
         <div className="card">
           <img src="" className="card-img-top" alt="img not found" />
+          <Badge />
           <div className="card-body">
             <h5 className="card-title">{breed.name}</h5>
             <p className="card-text">{breed.description}</p>
