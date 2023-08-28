@@ -2,9 +2,12 @@ import useCatBreedApi from "../customHook/useCatBreedApi";
 import { StyledCatCard } from "./styled/CatCard.styled";
 import { BsStarFill, BsStar } from "react-icons/bs";
 import Badge from "./Badge";
+import Button from "./Button";
+import { StyledButton } from "./styled";
 
 export default function CatCard() {
   const [breed] = useCatBreedApi();
+  console.log(breed);
 
   return (
     <>
@@ -37,8 +40,8 @@ export default function CatCard() {
                 ) : null
               )}
             </div>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
+            <a href={breed.wikipedia_url} target="_blank">
+              <Button>WIKIPEDIA </Button>
             </a>
           </div>
         </div>
