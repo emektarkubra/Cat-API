@@ -1,10 +1,14 @@
-function App() {
+import CatBreedsForm from "./components/CatBreedsForm";
+import Container from "./components/Container";
+import CatCard from "./components/CatCard";
 
+function App() {
   return (
-    <>
-      <h1>App</h1>
-    </>
-  )
+    <Container>
+      <CatBreedsForm />
+      <CatCard />
+    </Container>
+  );
 }
 
-export default App
+export default App;
