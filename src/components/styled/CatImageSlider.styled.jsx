@@ -29,6 +29,7 @@ export const StyledCatImageSlider = styled.div`
   }
   .testimonal {
     width: 100%;
+    min-height: 100px;
     background: rgba(0, 0, 0, 0.5);
   }
 
@@ -38,7 +39,10 @@ export const StyledCatImageSlider = styled.div`
   }
   .img {
     width: 50vw;
+    min-width: 300px;
     height: 32vw;
+    min-height: 180px;
+    /* min-height : 0px; */
     object-fit: cover;
   }
 
@@ -52,6 +56,8 @@ export const StyledCatImageSlider = styled.div`
     cursor: pointer;
     height: 1.1vw;
     width: 1.1vw;
+    min-width: 8px;
+    min-height: 8px;
     margin: 0 6px;
     background-color: #bbb;
     border-radius: 50%;
