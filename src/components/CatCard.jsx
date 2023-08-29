@@ -4,16 +4,16 @@ import { BsStarFill, BsStar } from "react-icons/bs";
 import Badge from "./Badge";
 import Button from "./Button";
 import { StyledButton } from "./styled";
+import CatImageSlider from "./CatImageSlider";
 
 export default function CatCard() {
   const [breed] = useCatBreedApi();
-  console.log(breed);
 
   return (
     <>
       <StyledCatCard>
         <div className="card">
-          <img src="" className="card-img-top" alt="img not found" />
+          <CatImageSlider />
           <Badge />
           <div className="card-body">
             <h5 className="card-title">{breed.name}</h5>

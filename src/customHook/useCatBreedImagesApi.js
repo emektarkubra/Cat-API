@@ -2,8 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { CatContext } from "../context/CatContext";
 import { axiosCatApi } from "./axiosApi";
 
-export default function useCatBreedApi() {
-  const [breed, setBreed] = useState([]);
+export default function useCatBreedImagesApi() {
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
@@ -11,14 +11,16 @@ export default function useCatBreedApi() {
   const { breedId } = useContext(CatContext);
 
   const getData = async () => {
-    const response = await axiosCatApi.get(`/breeds/${breedId}`);
+    const response = await axiosCatApi.get(
+      `/images/search?limit=10&breed_ids=${breedId}`
+    );
     const responseData = await response?.data;
     if (response.status !== 200) {
       setIsError(true);
       setErrorMessage("Veri alınamadı");
       throw new Error("Veri alınamadı");
     }
-    setBreed(responseData);
+    setData(responseData);
     setIsLoading(false);
   };
 
@@ -26,5 +28,5 @@ export default function useCatBreedApi() {
     getData();
   }, [breedId]);
 
-  return [breed, isLoading, isError, errorMessage];
+  return [data, isLoading, isError, errorMessage];
 }
