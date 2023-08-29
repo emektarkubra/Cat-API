@@ -13,7 +13,7 @@ export const StyledCatBreedsFormBox = styled.div`
     }
     & > #cats {
       font-size: 16px;
-      width: 434px;
+      width: 32vw;
       outline: 0;
       border: 1px solid white;
       border-bottom: 1px solid black;

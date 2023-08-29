@@ -37,8 +37,8 @@ export const StyledCatImageSlider = styled.div`
     height: 100%;
   }
   .img {
-    width: 650px;
-    height: 400px;
+    width: 50vw;
+    height: 32vw;
     object-fit: cover;
   }
 

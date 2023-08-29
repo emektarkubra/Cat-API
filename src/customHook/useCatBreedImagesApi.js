@@ -17,7 +17,7 @@ export default function useCatBreedImagesApi() {
     const responseData = await response?.data;
     if (response.status !== 200) {
       setIsError(true);
-      setErrorMessage("Veri alınamadı");
+      setErrorMessage("Resim yüklenemedi");
       throw new Error("Veri alınamadı");
     }
     setData(responseData);
@@ -25,7 +25,9 @@ export default function useCatBreedImagesApi() {
   };
 
   useEffect(() => {
-    getData();
+    setTimeout(() => {
+      getData();
+    }, 1500);
   }, [breedId]);
 
   return [data, isLoading, isError, errorMessage];
