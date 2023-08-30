@@ -25,9 +25,7 @@ export default function useCatBreedImagesApi() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      getData();
-    }, 1500);
+    getData();
   }, [breedId]);
 
   return [data, isLoading, isError, errorMessage];

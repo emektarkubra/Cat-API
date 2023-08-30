@@ -4,8 +4,21 @@ export const StyledCatCard = styled.div`
   color: #000000de;
 
   .card {
+    overflow-y: scroll;
     box-shadow: 1px 2px 5px 2px gray;
     padding: 2em;
+    height: 70vw;
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: #eaeaea;
+      border-left: 1px solid #ccc;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #596971;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #2e3944;
+    }
     & > .card-body {
       font-size: 20px;
       & > .card-title {
